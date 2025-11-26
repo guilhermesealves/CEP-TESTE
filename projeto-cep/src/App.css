@@ -1,0 +1,152 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #0c0c0c;
+  font-family: "Inter", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Container */
+.FormAll {
+  width: 100%;
+  max-width: 650px;
+  padding: 20px;
+}
+
+/* Card do form */
+.FormAll form {
+  background: rgba(22, 22, 22, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 30px;
+  border-radius: 18px;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+  color: white;
+}
+
+/* Título */
+.FormAll h1 {
+  font-size: 22px;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+/* 2 colunas dos inputs */
+.input-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+/* labels */
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+  color: #cfcfcf;
+}
+
+/* inputs estilo vidro */
+input {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 12px;
+  border-radius: 10px;
+  color: white;
+  transition: 0.2s;
+}
+
+input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 8px rgba(59, 130, 246, 0.4);
+  outline: none;
+}
+
+/* botões */
+.buttons {
+  margin-top: 25px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+.cancel,
+.send {
+  padding: 12px 25px;
+  font-size: 15px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+/* cancelar */
+.cancel {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.cancel:hover {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+/* enviar */
+.send {
+  background: rgba(40, 120, 255, 0.6);
+  border-color: rgba(40, 120, 255, 0.4);
+}
+
+.send:hover {
+  background: rgba(40, 120, 255, 0.9);
+  transform: scale(1.03);
+}
+
+/* mobile */
+@media (max-width: 600px) {
+  .input-group {
+    grid-template-columns: 1fr;
+  }
+}
