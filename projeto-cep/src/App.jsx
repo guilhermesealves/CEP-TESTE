@@ -47,11 +47,11 @@ function App() {
 
   return (
     <div className="FormAll">
-      {/* MODAL DE ERRO */}
+      
       {showErrorBox && (
         <div className="modal-overlay">
           <div className="modal-box">
-            <h2>Ops! CEP inválido</h2>
+            
             <p>
               O CEP deve conter exatamente 8 números e corresponder a um endereço válido.
             </p>
@@ -63,11 +63,11 @@ function App() {
       )}
 
       <form
-        onSubmit={(e) => e.preventDefault()} // previne envio do form
+        onSubmit={(e) => e.preventDefault()} 
       >
         <h1>Consultar CEP</h1>
 
-        {/* Input CEP centralizado */}
+       
         <div className="input-group single-column">
           <label>
             CEP *
@@ -86,7 +86,7 @@ function App() {
           </label>
         </div>
 
-        {/* Botão Consultar CEP no início */}
+       
         {!showFields && (
           <div className="buttons">
             <button
@@ -101,7 +101,7 @@ function App() {
           </div>
         )}
 
-        {/* Inputs após buscar CEP */}
+       
         {showFields && (
           <div className="form-box animate-form">
             <div className="input-group two-columns">
@@ -133,7 +133,7 @@ function App() {
               </label>
             </div>
 
-            {/* Botões lado a lado */}
+    
             <div className="buttons">
               <button
                 type="button"
