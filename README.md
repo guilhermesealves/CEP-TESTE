@@ -2,6 +2,10 @@
 
 Projeto em **React** para consultar informações de endereço a partir de um **CEP**, utilizando a API do [ViaCEP](https://viacep.com.br/).  
 O sistema valida automaticamente o CEP e exibe os dados completos do endereço.
+
+
+---
+
 Você pode testar em https://cep-teste.vercel.app/
 
 ---
