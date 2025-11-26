@@ -22,7 +22,7 @@ h1 {
   text-align: center;
 }
 
-/* ===== FORMULÁRIO ===== */
+
 .FormAll {
   width: 100%;
   max-width: 650px;
@@ -42,7 +42,7 @@ h1 {
   align-items: center;
 }
 
-/* ===== INPUTS ===== */
+
 .input-group {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -75,12 +75,12 @@ input:focus {
   transform: scale(1.02);
 }
 
-/* ===== BOTÕES ===== */
+
 .buttons {
   margin-top: 20px;
   display: flex;
   gap: 10px;
-  justify-content: center; /* centralizado */
+  justify-content: center; 
   flex-wrap: wrap;
 }
 
@@ -117,7 +117,7 @@ input:focus {
   background-color: #e03b3b;
 }
 
-/* ===== FORM BOX ANIMAÇÃO ===== */
+
 .form-box {
   opacity: 0;
   max-height: 0;
@@ -133,7 +133,7 @@ input:focus {
   transform: translateY(0);
 }
 
-/* ===== MODAL ===== */
+
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -175,7 +175,6 @@ input:focus {
   margin-bottom: 20px;
 }
 
-/* Animação do modal */
 @keyframes modal-show {
   from {
     opacity: 0;
@@ -187,7 +186,7 @@ input:focus {
   }
 }
 
-/* ===== RESPONSIVO ===== */
+
 @media (max-width: 600px) {
   .input-group {
     grid-template-columns: 1fr;
@@ -201,12 +200,12 @@ input:focus {
 .input-group.single-column {
   display: flex;
   flex-direction: column;
-  align-items: center; /* centraliza horizontalmente */
+  align-items: center; 
   justify-content: center;
   width: 100%;
 }
 
 .input-group.single-column label {
   width: 100%;
-  max-width: 300px; /* define limite do input */
+  max-width: 300px; 
 }
