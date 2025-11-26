@@ -37,7 +37,7 @@
   }
 }
 
-/* Fundo com a foto de São Paulo escurecida */
+
 body {
   margin: 0;
   padding: 0;
@@ -54,14 +54,14 @@ body {
   align-items: center;
 }
 
-/* Container */
+
 .FormAll {
   width: 100%;
   max-width: 650px;
   padding: 20px;
 }
 
-/* Card do form */
+
 .FormAll form {
   background: rgba(22, 22, 22, 0.85);
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -72,14 +72,14 @@ body {
   color: white;
 }
 
-/* Título */
+
 .FormAll h1 {
   font-size: 22px;
   margin-bottom: 25px;
   font-weight: 600;
 }
 
-/* 2 colunas dos inputs */
+
 .input-group {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -87,7 +87,7 @@ body {
   margin-bottom: 18px;
 }
 
-/* Labels */
+
 label {
   display: flex;
   flex-direction: column;
@@ -96,7 +96,7 @@ label {
   color: #cfcfcf;
 }
 
-/* Inputs estilo vidro */
+
 input {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.15);
@@ -112,7 +112,7 @@ input:focus {
   outline: none;
 }
 
-/* Botões */
+
 .buttons {
   margin-top: 25px;
   display: flex;
@@ -130,7 +130,7 @@ input:focus {
   transition: 0.2s;
 }
 
-/* Cancelar */
+
 .cancel {
   background: rgba(255, 0, 0, 0.8);
 }
@@ -139,7 +139,6 @@ input:focus {
   background: rgba(255, 0, 0, 0.18);
 }
 
-/* Enviar */
 .send {
   background: rgba(40, 120, 255, 0.6);
   border-color: rgba(40, 120, 255, 0.4);
@@ -150,7 +149,7 @@ input:focus {
   transform: scale(1.03);
 }
 
-/* Mobile */
+
 @media (max-width: 600px) {
   .input-group {
     grid-template-columns: 1fr;
@@ -164,7 +163,7 @@ input:focus {
   transition: all 0.5s ease;
 }
 
-/* Quando os campos forem liberados */
+
 .hidden-fields.show {
   opacity: 1;
   max-height: 1000px;

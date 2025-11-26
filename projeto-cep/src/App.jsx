@@ -47,15 +47,29 @@ function App() {
       <form onSubmit={handleSubmit(onSubmit)}>
         <h1>Consultar CEP</h1>
 
-        {/* CAMPO CEP */}
+
         <div className="input-group">
           <label>
             CEP *
-            <input type="text" {...register("cep")} onBlur={checkCEP} />
+            <input
+              type="text"
+              {...register("cep")}
+              maxLength={8} 
+              onInput={(e) => {
+                e.target.value = e.target.value.replace(/\D/g, ""); 
+              }}
+              onBlur={checkCEP}
+              onKeyDown={(e) => {
+                if (e.key === "Enter") {
+                  e.preventDefault();
+                  checkCEP(e);
+                }
+              }}
+            />
           </label>
         </div>
 
-        {/* CAMPOS QUE APARECEM DEPOIS */}
+
         <div className={`hidden-fields ${showFields ? "show" : ""}`}>
           <div className="input-group">
             <label>
@@ -89,11 +103,9 @@ function App() {
           </div>
 
           <div className="buttons">
-            <button type="button" onClick={handleCancel} className="cancel">
-              Cancelar
-            </button>
+            
 
-            <button onhan className="send">Enviar</button>
+            <button onhan className="send" onClick={handleCancel}>Limpar</button>
           </div>
         </div>
       </form>
