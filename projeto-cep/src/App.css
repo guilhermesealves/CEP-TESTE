@@ -214,3 +214,15 @@ input:focus {
     gap: 10px;
   }
 }
+
+.form-box {
+  opacity: 0;
+  max-height: 1000px; /* garante espaço suficiente para todo conteúdo */
+  overflow: hidden;
+  transition: opacity 0.6s ease; /* animação suave */
+}
+
+.animate-form {
+  opacity: 1;
+  transition: opacity 0.6s ease;
+}

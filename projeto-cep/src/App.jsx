@@ -53,8 +53,7 @@ function App() {
           <div className="modal-box">
             <h2>Ops! CEP inválido</h2>
             <p>
-              V"O CEP deve conter exatamente 8 números e corresponder a um endereço válido
-             
+              O CEP deve conter exatamente 8 números e corresponder a um endereço válido.
             </p>
             <button className="btn-back" onClick={() => setShowErrorBox(false)}>
               Voltar
