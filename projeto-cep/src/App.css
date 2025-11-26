@@ -1,66 +1,33 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-
+/* ===== RESET E BASE ===== */
 body {
   margin: 0;
   padding: 0;
-  height: 100vh;
   font-family: "Inter", sans-serif;
-
   background: 
       linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
       url("SP.jpg") no-repeat center center;
   background-size: cover;
-
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
+  color: white;
 }
 
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  text-align: center;
+}
 
+/* ===== FORMULÁRIO ===== */
 .FormAll {
   width: 100%;
   max-width: 650px;
   padding: 20px;
 }
-
 
 .FormAll form {
   background: rgba(22, 22, 22, 0.85);
@@ -69,24 +36,20 @@ body {
   border-radius: 18px;
   backdrop-filter: blur(5px);
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
-  color: white;
+  transition: all 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-
-.FormAll h1 {
-  font-size: 22px;
-  margin-bottom: 25px;
-  font-weight: 600;
-}
-
-
+/* ===== INPUTS ===== */
 .input-group {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 18px;
+  width: 100%;
   margin-bottom: 18px;
 }
-
 
 label {
   display: flex;
@@ -96,80 +59,81 @@ label {
   color: #cfcfcf;
 }
 
-
 input {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.15);
   padding: 12px;
   border-radius: 10px;
   color: white;
-  transition: 0.2s;
+  transition: all 0.3s ease;
 }
 
 input:focus {
   border-color: #3b82f6;
-  box-shadow: 0 0 8px rgba(59, 130, 246, 0.4);
+  box-shadow: 0 0 8px rgba(59, 130, 246, 0.5);
   outline: none;
+  transform: scale(1.02);
 }
 
-
+/* ===== BOTÕES ===== */
 .buttons {
-  margin-top: 25px;
+  margin-top: 20px;
   display: flex;
-  justify-content: flex-end;
-  gap: 15px;
+  gap: 10px;
+  justify-content: center; /* centralizado */
+  flex-wrap: wrap;
 }
 
-.cancel,
 .send {
-  padding: 12px 25px;
-  font-size: 15px;
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 10px 20px;
+  font-size: 14px;
+  border-radius: 8px;
+  border: none;
+  background-color: #2878ff;
+  color: white;
   cursor: pointer;
-  transition: 0.2s;
-}
-
-
-.cancel {
-  background: rgba(255, 0, 0, 0.8);
-}
-
-.cancel:hover {
-  background: rgba(255, 0, 0, 0.18);
-}
-
-.send {
-  background: rgba(40, 120, 255, 0.6);
-  border-color: rgba(40, 120, 255, 0.4);
+  transition: all 0.2s ease;
+  font-family: 'Poppins', sans-serif;
 }
 
 .send:hover {
-  background: rgba(40, 120, 255, 0.9);
-  transform: scale(1.03);
+  background-color: #1f5bcc;
+  transform: scale(1.05);
 }
 
-
-@media (max-width: 600px) {
-  .input-group {
-    grid-template-columns: 1fr;
-  }
+.btn-back {
+  font-family: 'Poppins', sans-serif;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #ff6b6b;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
 }
-.hidden-fields {
+
+.btn-back:hover {
+  background-color: #e03b3b;
+}
+
+/* ===== FORM BOX ANIMAÇÃO ===== */
+.form-box {
   opacity: 0;
   max-height: 0;
   overflow: hidden;
-  transform: translateY(-10px);
+  transform: translateY(-20px);
   transition: all 0.5s ease;
+  width: 100%;
 }
 
-
-.hidden-fields.show {
+.animate-form {
   opacity: 1;
   max-height: 1000px;
   transform: translateY(0);
 }
 
+/* ===== MODAL ===== */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -177,68 +141,72 @@ input:focus {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
-
-
-  opacity: 0;
-  animation: fadeIn 0.3s forwards;
+  z-index: 100;
 }
 
 .modal-box {
-  background: rgba(22, 22, 22, 0.95);
-  border-radius: 15px;
+  background: rgba(30, 30, 30, 0.95);
   padding: 30px 25px;
-  max-width: 400px;
+  border-radius: 15px;
   width: 90%;
+  max-width: 400px;
   text-align: center;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
-
-
-  transform: translateY(-30px);
-  animation: slideDown 0.3s forwards;
+  color: white;
+  animation: modal-show 0.3s ease;
 }
 
 .modal-box h2 {
-  margin-bottom: 15px;
-  font-size: 20px;
-  color: #ff4d4d;
-  animation: fadeIn 0.5s;
+  font-family: 'Poppins', sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #ff6b6b;
 }
 
 .modal-box p {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #f0f0f0;
   margin-bottom: 20px;
-  color: #fff;
-  animation: fadeIn 0.5s 0.1s forwards;
 }
 
-.btn-back {
-  padding: 10px 25px;
-  background: #3b82f6;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: transform 0.2s, background 0.2s;
-}
-
-.btn-back:hover {
-  background: #2563eb;
-  transform: scale(1.05);
-}
-
-
-@keyframes fadeIn {
+/* Animação do modal */
+@keyframes modal-show {
+  from {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.95);
+  }
   to {
     opacity: 1;
+    transform: translateY(0) scale(1);
   }
 }
 
-@keyframes slideDown {
-  to {
-    transform: translateY(0);
+/* ===== RESPONSIVO ===== */
+@media (max-width: 600px) {
+  .input-group {
+    grid-template-columns: 1fr;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 10px;
   }
 }
+.input-group.single-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centraliza horizontalmente */
+  justify-content: center;
+  width: 100%;
+}
 
+.input-group.single-column label {
+  width: 100%;
+  max-width: 300px; /* define limite do input */
+}
